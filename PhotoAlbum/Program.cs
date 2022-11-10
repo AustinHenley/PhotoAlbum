@@ -9,8 +9,6 @@ stopWatch.Start();
 
 List<Photo> photos = Photo.PullPhotos();
 
-stopWatch.Stop();
-
 int previousAlbumID = 0;
 for (int i = 0; i < photos.Count - 1; i++)
 {
@@ -21,6 +19,8 @@ for (int i = 0; i < photos.Count - 1; i++)
     }
     Console.WriteLine($"[{currentPhoto.id}] {currentPhoto.title}");
 }
+
+stopWatch.Stop();
 
 Console.WriteLine($"Pulled photos in {stopWatch.Elapsed.TotalMilliseconds} milliseconds");
 
