@@ -30,8 +30,7 @@ for (int i = 0; i < photos.Count - 1; i++)
     Photo currentPhoto = photos[i];
     if (previousAlbumID != currentPhoto.albumId)
     {
-        previousAlbumID = currentPhoto.albumId;
-        Console.WriteLine($"photo-album {previousAlbumID}");
+        Console.WriteLine($"photo-album {++previousAlbumID}");
     }
     Console.WriteLine($"[{currentPhoto.id}] {currentPhoto.title}");
 }
